@@ -1,0 +1,13 @@
+  mysql:
+    image: mysql:8.0
+    platform: linux/amd64
+    volumes:
+      - /tmp:/tmp
+    ports:
+      - "3306:3306"
+    networks:
+      - network
+    environment:
+      MYSQL_ROOT_PASSWORD: "password"
+    restart: always
+
