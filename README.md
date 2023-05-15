@@ -15,21 +15,24 @@ Thomas Tran
 
 In this project we created a database for a coffee shop and dockerized it, so that it can be used in an application and deployed by anyone.
 
-Steps to set up on Docker:
+Commands to set up on Docker:
 ```
 docker build -t coffeeshop_db .
-docker run -d -p 4408:4408 --name mycoffeeshop coffeeshop_db
+docker run -d -p 8080:8080 --name mycoffeeshop coffeeshop_db
 ```  
-
-How to pull from Docker repository:
+  
+How to pull and run from Docker Hub repository:
 ```
 docker pull ttran27/coffeeshop_db
+docker run -p 8080:8080 --name coffeeshop-db ttran27/coffeeshop_db
 ```  
+  
 Once you get the docker image and head over to the container's terminal, use these commands to get access into the database:
 ```
 mysql -u root -p
 Enter Password: wordpass
 ```
+  
 From there you can start using the database!  
 We have created two databases, one is empty named ***coffeeshop*** and the other database has example values in it, ***coffeeshop_example***
 
